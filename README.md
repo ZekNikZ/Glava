@@ -38,4 +38,4 @@ A full list of shorthands and useful features can found on the [wiki](https://gi
  - [Apache Commons](https://commons.apache.org/): Useful library functions.
  - [Jalopy](http://notzippy.github.io/JALOPY2-MAIN/): Code beautifier.
  - [Glava Legacy](https://github.com/GamrCorps/Glava_Legacy): Previous version of _Glava_.
- - [Esolangs Page](http://esolangs.org/wiki/Glava): Esolang wiki page (still a work-in-progress).
+ - [Esolangs Page](http://esolangs.org/wiki/Glava): Esolang wiki page.
