@@ -28,7 +28,7 @@ Basic usage: `java -jar glava.jar [command-line args]`. The file extension for _
 Even if you don't use _Glava_ for code golf competitions, it still has some handy features, including:
  - Multi-line strings.
  - Shorthands for command-line arguments.
- - Automatic class wrapping.
+ - Automatic `class` wrapping.
  - Automatic bracket closing.
  - and more!
 
