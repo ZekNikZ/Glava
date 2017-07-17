@@ -32,7 +32,7 @@ Even if you don't use _Glava_ for code golf competitions, it still has some hand
  - Automatic bracket closing.
  - and more!
 
-A full list of shorthands and useful features can found on the [wiki](https://github.com/GamrCorps/Glava/wik).
+A full list of shorthands and useful features can found on the [wiki](https://github.com/GamrCorps/Glava/wiki).
 
 ## External Resources
  - [Apache Commons](https://commons.apache.org/): Useful library functions.
