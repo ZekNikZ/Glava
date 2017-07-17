@@ -144,6 +144,10 @@ class GlavaRunner {
                 openSeparators.add(")");
                 return " new Integer( ";
             }),
+            new Replacement("(?<![a-zA-Z])ησ", 1, 1, () -> {
+                openSeparators.add(")");
+                return " new String( ";
+            }),
 
             // Casting
             new Replacement("(?<![a-zA-Z])ζΠ", 1, 1, " (boolean) "),

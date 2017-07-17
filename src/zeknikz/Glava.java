@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.util.Arrays;
 
 public class Glava {
-    private static final String GLAVA_ENCODING = "ISO-8859-7";
     private static final String HELP_STRING =
             "GLAVA COMMAND-LINE REFERENCE\n" +
             "----------------------------\n" +
@@ -14,7 +13,7 @@ public class Glava {
             "-file [file], -f [file]:\n" +
             "  Open a file and interpret it as Glava code in UTF-8.\n" +
             "-gfile [file], -gf [file]:\n" +
-            "  Open a file and interpret it as Glava code in " + GLAVA_ENCODING + ".\n" +
+            "  Open a file and interpret it as Glava code in the Glava Code Page.\n" +
             "-code [code], -c [code]:\n" +
             "  Run a UTF-8 string as Glava code.\n" +
             "-debug, -d:\n" +
@@ -53,7 +52,7 @@ public class Glava {
                         System.out.println("ERROR: Missing an argument! Use -help for help.");
                         return;
                     }
-                    code = readFile(args[++i], GLAVA_ENCODING);
+                    code = readFile(args[++i], "GLAVA");
                     runCode(code, debugMode, Arrays.copyOfRange(args, i + 1, args.length));
                     break argLoop;
 
@@ -87,7 +86,11 @@ public class Glava {
             int fileLength = fr.read(data);
             fr.close();
             if (fileLength == -1) return null;
-            return new String(data, encoding);
+            if (encoding.equals("GLAVA")) {
+                return GlavaEncoding.decodeToUTF8(data);
+            } else {
+                return new String(data, encoding);
+            }
         } catch (Exception e) {
             e.printStackTrace();
             return null;
