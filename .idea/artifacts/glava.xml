@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="glava">
+    <output-path>$PROJECT_DIR$/out/artifacts/glava</output-path>
+    <root id="archive" name="glava.jar">
+      <element id="module-output" name="Glava2" />
+      <element id="library" level="project" name="org.apache.commons:commons-lang3:3.3.2" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
