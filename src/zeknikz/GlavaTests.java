@@ -1,7 +1,5 @@
 package zeknikz;
 
-import static java.lang.Math.*;
-
 public class GlavaTests {
 
     private static final String[] testPrograms = {

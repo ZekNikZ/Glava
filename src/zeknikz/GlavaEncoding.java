@@ -2,7 +2,7 @@ package zeknikz;
 
 import java.io.UnsupportedEncodingException;
 
-public class GlavaEncoding {
+class GlavaEncoding {
 
     private static final char[] encoding;
 
@@ -27,6 +27,7 @@ public class GlavaEncoding {
                 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254
         };
         for(int chr : greek) {
+            assert charStr != null;
             buffer[chr] = charStr.charAt(chr);
         }
         String c80_to_99 = "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽ⒷⒸⒹⒻⒾⓈ①②③④⑤⑥⑦⑧⑨⑩";

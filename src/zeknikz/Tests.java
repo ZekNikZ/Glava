@@ -32,6 +32,7 @@ public class Tests {
         }
     }
 
+    @SuppressWarnings("unused")
     public static final GlavaCLArg[] CLArgs = new GlavaCLArg[] {
             new GlavaCLArg("12"),
             new GlavaCLArg("12.3"),
@@ -41,8 +42,9 @@ public class Tests {
             new GlavaCLArg("asfafdB")
     };
 
-    public static final Object B[] = {12, 12.3d, 2f, 't', true, "asfsdfasdf"};
+    private static final Object B[] = {12, 12.3d, 2f, 't', true, "asfsdfasdf"};
 
+    @SuppressWarnings({"ResultOfMethodCallIgnored","unused"})
     public static void main (String[] args) {
         boolean b = glava_getArg(4);
         int i = glava_getArg(0);
@@ -50,6 +52,7 @@ public class Tests {
         Math.pow(glava_getArg(1), glava_getArg(0));
     }
 
+    @SuppressWarnings("unchecked")
     private static <T> T glava_getArg(int num) {
         return (T) B[num];
     }
