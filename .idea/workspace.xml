@@ -7,6 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4dfd631-8da7-413d-a737-9e4c95f46806" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Glava2/zeknikz/test.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test2.gl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Glava2/zeknikz/Glava.class" afterPath="$PROJECT_DIR$/out/production/Glava2/zeknikz/Glava.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Glava2/zeknikz/GlavaEncoding.class" afterPath="$PROJECT_DIR$/out/production/Glava2/zeknikz/GlavaEncoding.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Glava2/zeknikz/GlavaRunner.class" afterPath="$PROJECT_DIR$/out/production/Glava2/zeknikz/GlavaRunner.class" />
@@ -17,6 +19,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zeknikz/GlavaEncoding.java" afterPath="$PROJECT_DIR$/src/zeknikz/GlavaEncoding.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zeknikz/GlavaRunner.java" afterPath="$PROJECT_DIR$/src/zeknikz/GlavaRunner.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.gl" afterPath="$PROJECT_DIR$/test.gl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlavaRunner.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GlavaRunner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/zeknikz/GlavaRunner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -84,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Glava.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Glava.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/zeknikz/Glava.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1785">
@@ -507,6 +510,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -523,7 +527,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21375267" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21375267" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -770,14 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/zeknikz/Glava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test2.gl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -838,6 +834,14 @@
             <element signature="e#18157#18218#1" expanded="true" />
             <element signature="e#19585#19631#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/zeknikz/Glava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
