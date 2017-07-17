@@ -3,6 +3,7 @@ package zeknikz;
 import de.hunsicker.io.FileFormat;
 import de.hunsicker.jalopy.Jalopy;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.SystemUtils;
 
 import javax.tools.JavaCompiler;
 import javax.tools.StandardJavaFileManager;
@@ -100,10 +101,10 @@ class GlavaRunner {
     }
 
     private static final String COMMON_IMPORTS = "import java.util.*;\nimport static java.lang.Math.*;\nimport java.io.*;\nimport java.awt.*;\nimport javax.swing.*;\nimport java.text.*;\nimport java.util.regex.*;\n";
-    private static final String COMMON_VARIABLES = "public static int m = 0;\npublic static int n = 1;\npublic static double d = 0d;\npublic static float f = 0f;\npublic static String s = \"\";\npublic static String t = \"\";\npublic static String u = \"abcdefghijklmnopqrstuvwxyz\";\npublic static String U = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\npublic static char c = 'A';\npublic static boolean T = true;\npublic static boolean F = false;\n";
+    private static final String COMMON_VARIABLES = "public static int m = 0;\npublic static int n = 1;\npublic static double d = 0d;\npublic static float f = 0f;\npublic static String s = \"\";\npublic static String t = \"\\n\";\npublic static String u = \"abcdefghijklmnopqrstuvwxyz\";\npublic static String U = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\npublic static char c = 'A';\npublic static boolean T = true;\npublic static boolean F = false;\n";
     private static String GLAVA_ARGS;
 
-    private static final String KEY_CHARACTERS = "βχδφισΠΣΔΦΓηεΞωΩπλκυύϋζ⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽①②③④⑤⑥⑦⑧⑨⑩ⒷⒸⒹⒻⒾⓈ";
+    private static final String KEY_CHARACTERS = "βχδφισΠΣΔΦΓηεΞωΩπλκυύϋζ⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽①②③④⑤⑥⑦⑧⑨⑩ⒷⒸⒹⒻⒾⓈώ";
     private static final String GROUP_OPENING_CHARACTERS = "({[";
     private static final String GROUP_CLOSING_CHARACTERS = ")}]";
 
@@ -250,7 +251,11 @@ class GlavaRunner {
             }),
 
             // Misc
-            new Replacement("(?<![a-zA-Z])η(?![ΠΣΔΦΓ])", 1, 1, " null ")
+            new Replacement("(?<![a-zA-Z])η(?![ΠΣΔΦΓ])", 1, 1, " null "),
+            new Replacement("(?<![a-zA-Z])ώ", 1, 0, () -> {
+                openSeparators.remove(openSeparators.size() - 1);
+                return " }; ";
+            })
     };
 
 
@@ -312,9 +317,9 @@ class GlavaRunner {
                 }
             } else if (inString) {
                 if (this.code.charAt(index) == '\n') {
-                    this.code = this.code.replaceFirst(String.format("(?<=^.{%s})\n", index), "\\n");
-                    debugLog("Linefeed detected in string at index " + index + ".", true);
-                    index += 2;
+                    this.code = this.code.substring(0, index - (SystemUtils.IS_OS_WINDOWS ? 1 : 0)) + "\\n" + this.code.substring(index + 1, this.code.length());
+                    debugLog("Linefeed detected in string at index " + index + ".");
+                    index += 2 - (SystemUtils.IS_OS_WINDOWS ? 1 : 0);
                 } else {
                     index++;
                 }
@@ -339,7 +344,7 @@ class GlavaRunner {
                     if (Pattern.compile(rp.regex).matcher(this.code.substring(Math.max(0, index - rp.checkCharsBefore), Math.min(index + rp.checkCharsAfter + 1, this.code.length()))).find()) {
                         String rpStr = rp.replacement.getReplacement();
                         char rpChar = this.code.charAt(index);
-                        this.code = this.code.replaceFirst(String.format("(?<=^.{%s})%s", index, rp.regex), rpStr);
+                        this.code = this.code.replaceFirst(String.format("(?s)(?<=^.{%s})%s", index, rp.regex), rpStr);
                         debugLog(String.format("Replaced \"%s\" with \"%s\" at index %d.", "" + rpChar, rpStr, index), true);
                         index += rpStr.length();
                         continue mainLoop;
