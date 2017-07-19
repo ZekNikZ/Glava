@@ -29,7 +29,7 @@ class GlavaRunner {
     private boolean inBlockComment;
     private GlavaCLArg[] CLArgs;
 
-    class GlavaCLArg {
+    private class GlavaCLArg {
         String type;
         String value;
 

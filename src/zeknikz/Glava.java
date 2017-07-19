@@ -108,6 +108,5 @@ public class Glava {
     }
 }
 
-// TODO: FANCY COMMAND-LINE ARGUMENTS
 // TODO: MORE SHORTHANDS
 // TODO: CLEAN UP CODE
